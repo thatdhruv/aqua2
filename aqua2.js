@@ -1,7 +1,7 @@
 //
 // aqua2.js
 //
-// A self-contained UI framework inspired by Apple's Aqua design language.
+// A is a self-contained UI framework for the web, inspired by Apple's Aqua design language.
 //
 
 (function initializeAqua() {
@@ -188,10 +188,7 @@
 }
 
 .aqua-radio input[type="radio"]:checked + .aqua-radio-control::before {
-  background:
-    radial-gradient(ellipse 80% 55% at 50% 18%, rgba(255,255,255,0.40) 0%, transparent 68%),
-    linear-gradient(to bottom, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.18) 100%),
-    var(--aqua-color);
+  background: radial-gradient(ellipse 80% 55% at 50% 18%, rgba(255,255,255,0.40) 0%, transparent 68%), linear-gradient(to bottom, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.18) 100%), var(--aqua-color);
   border-color: var(--aqua-color);
 }
 
@@ -360,11 +357,15 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .aqua-input:focus, .graphite-input:focus { background: rgba(255,255,255,0.72); }
+  .aqua-input:focus, .graphite-input:focus {
+    background: rgba(255,255,255,0.72);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .aqua-input:focus, .graphite-input:focus { background: rgba(255,255,255,0.16); }
+  .aqua-input:focus, .graphite-input:focus {
+    background: rgba(255,255,255,0.16);
+  }
 }
 
 .aqua-select {
@@ -439,12 +440,14 @@
 
 .aqua-select-panel {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: color-mix(in srgb, var(--aqua-background) 200%, white);
   border: 1.5px solid var(--aqua-border);
   border-radius: 20px;
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
   box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
   overflow: hidden;
   opacity: 0;
@@ -456,27 +459,27 @@
 }
 
 .aqua-select.open .aqua-select-panel {
-    opacity: 1;
-    pointer-events: auto;
-    transform: scaleY(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transform: scaleY(1) translateY(0);
 }
 
 .aqua-select.open .aqua-select-trigger {
-    border-radius: 18px 18px 0 0;
-    border-bottom-color: transparent;
-    background: color-mix(in srgb, var(--aqua-background) 200%, white);
-    box-shadow: none;
+  border-radius: 18px 18px 0 0;
+  border-bottom-color: transparent;
+  background: color-mix(in srgb, var(--aqua-background) 200%, white);
+  box-shadow: none;
 }
 
 .aqua-select.open .aqua-select-cap {
-    border-radius: 0 18px 0 0;
+  border-radius: 0 18px 0 0;
 }
 
 .graphite-select.open .aqua-select-trigger {
-    border-radius: 18px 18px 0 0;
-    border-bottom-color: transparent;
-    background: color-mix(in srgb, var(--aqua-background) 200%, white);
-    box-shadow: none;
+  border-radius: 18px 18px 0 0;
+  border-bottom-color: transparent;
+  background: color-mix(in srgb, var(--aqua-background) 200%, white);
+  box-shadow: none;
 }
 
 .aqua-select-panel-header {
@@ -488,16 +491,16 @@
 }
 
 .aqua-select-panel-header .aqua-select-value-wrap {
-    padding: 8px 10px 8px 16px;
+  padding: 8px 10px 8px 16px;
 }
 
 .aqua-select-panel-header .aqua-select-value {
-    color: var(--aqua-foreground-muted);
+  color: var(--aqua-foreground-muted);
 }
 
 .aqua-select-panel-header .aqua-select-cap {
-    border-radius: 0;
-    border-left: 1px solid rgba(0,0,0,0.10);
+  border-radius: 0;
+  border-left: 1px solid rgba(0,0,0,0.10);
 }
 
 .aqua-select-option {
@@ -511,25 +514,25 @@
 }
 
 .aqua-select-option:hover {
-    background: color-mix(in srgb, var(--aqua-color) 12%, transparent);
+  background: color-mix(in srgb, var(--aqua-color) 12%, transparent);
 }
 
 .aqua-select-option.chosen {
-    color: var(--aqua-color);
-    font-weight: 600;
+  color: var(--aqua-color);
+  font-weight: 600;
 }
 
 .aqua-select-option:last-child {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .graphite-select .aqua-select-option:hover {
-    background: color-mix(in srgb, var(--graphite-color) 12%, transparent);
+  background: color-mix(in srgb, var(--graphite-color) 12%, transparent);
 }
 
 .graphite-select .aqua-select-option.chosen {
-    color: var(--graphite-color);
-    font-weight: 600;
+  color: var(--graphite-color);
+  font-weight: 600;
 }
 
 .aqua-slider {
@@ -553,7 +556,9 @@
 
 .aqua-slider-fill {
   position: absolute;
-  top: -1px; left: -1px; bottom: -1px;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
   border-radius: 999px;
   background: var(--aqua-color);
   background-image: radial-gradient(ellipse 80% 70% at 40% 20%, rgba(255,255,255,0.30) 0%, transparent 65%), linear-gradient(to bottom, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.00) 55%, rgba(255,255,255,0.10) 100%);
@@ -618,7 +623,9 @@
 
 .aqua-progress-fill {
   position: absolute;
-  top: 0; left: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
   border-radius: 999px;
   min-width: 14px;
   background-color: var(--aqua-color);
@@ -711,7 +718,9 @@
 
 .aqua-scrollbar-thumb {
   position: absolute;
-  top: 2px; bottom: 2px; left: 2px;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
   border-radius: 999px;
   min-width: 20px;
   background-color: var(--aqua-color);
@@ -726,6 +735,7 @@
   position: absolute;
   inset: -5px;
   background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 10px, color-mix(in srgb, var(--aqua-color) 70%, black 30%) 20px, transparent 30px);
+  background-position: calc(-1 * var(--thumb-left, 0px) - 5px) 0;
   filter: blur(4px);
 }
 
@@ -735,10 +745,7 @@
 
 .graphite-scrollbar .aqua-scrollbar-thumb::after {
   background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 10px, color-mix(in srgb, var(--graphite-color) 60%, black 40%) 20px, transparent 30px);
-}
-
-.aqua-scrollbar.dragging .aqua-scrollbar-thumb {
-  opacity: 0.68;
+  background-position: calc(-1 * var(--thumb-left, 0px) - 5px) 0;
 }
 
 .aqua-scrollbar-button {
@@ -755,6 +762,8 @@
   outline: none;
   padding: 0;
   transition: background 0.12s ease;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .aqua-scrollbar-button:hover {
@@ -770,11 +779,15 @@
 }
 
 .graphite-scrollbar .aqua-scrollbar-button:active {
-  background: rgba(0,0,0,0.18); }
+  background: rgba(0,0,0,0.18);
+}
+
 .aqua-scrollbar-button svg {
   width: 8px;
   height: 7px;
   flex-shrink: 0;
+  color: inherit;
+  fill: currentColor;
 }
 
 .aqua-scrollbar-buttons {
@@ -895,11 +908,11 @@
   }
 }
 
-/* Firefox dropdown fix */
+/* Firefox-specific glass fix */
 @supports (-moz-appearance: none) {
   .aqua-select-panel {
     background-color: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(20px) saturate(140%) !important;
+    backdrop-filter: blur(30px) saturate(140%) !important;
   }
 
   .aqua-select-panel-header {
@@ -909,7 +922,7 @@
   @media (prefers-color-scheme: dark) {
     .aqua-select-panel {
       background-color: rgba(28, 28, 30, 0.97) !important;
-      backdrop-filter: blur(25px) saturate(120%) !important;
+      backdrop-filter: blur(35px) saturate(120%) !important;
     }
 
     .aqua-select-panel-header {
@@ -1285,6 +1298,7 @@ document.querySelectorAll('.aqua-scrollbar').forEach(scrollbar => {
     }
 
     thumb.style.left = leftPixels + 'px';
+    thumb.style.setProperty('--thumb-left', leftPixels + 'px');
     thumb.style.width = thumbWidth + 'px';
     scrollbar.dataset.value = Math.round(currentValue);
   }
@@ -1339,7 +1353,7 @@ document.querySelectorAll('.aqua-scrollbar').forEach(scrollbar => {
     applyValue(currentValue + direction * step, true);
     let timer = setTimeout(function repeat() {
       applyValue(currentValue + direction * step, false);
-      timer = setTimeout(repeat, 80);
+      timer = setTimeout(repeat, 40);
     }, 300);
 
     const stopScrolling = () => {
