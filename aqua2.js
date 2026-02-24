@@ -894,6 +894,30 @@
     scroll-padding-inline: 16px;
   }
 }
+
+/* Firefox dropdown fix */
+@supports (-moz-appearance: none) {
+  .aqua-select-panel {
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(20px) saturate(140%) !important;
+  }
+
+  .aqua-select-panel-header {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .aqua-select-panel {
+      background-color: rgba(28, 28, 30, 0.97) !important;
+      backdrop-filter: blur(25px) saturate(120%) !important;
+    }
+
+    .aqua-select-panel-header {
+      background-color: rgba(40, 40, 42, 0.96) !important;
+      border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+}
   `;
 
   document.head.appendChild(aqua);
